@@ -17,7 +17,7 @@ const StyledText = styled.Text`
 const Signup = () => {
     return (
         <Container>
-            <StyledText>Signin</StyledText>
+            <StyledText>Signup</StyledText>
         </Container>
     );
 };
