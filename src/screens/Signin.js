@@ -17,9 +17,10 @@ const StyledText = styled.Text`
     font-size: 30px;
     color: #111111;
 `;
-// https://firebasestorage.googleapis.com/v0/b/rn-chat-f5ced.appspot.com/o/logo.png?alt=media&token=3c60d2b7-17e0-4183-b83a-43446f0744a2
-// const LOGO = 'https://firebasestorage.googleapis.com/v0/b/rn-chat-f5ced.appspot.com/o/logo.png?alt=media';
-const LOGO = 'https://firebasestorage.googleapis.com/v0/b/rn-chat-f5ced.appspot.com/o/logo.png?alt=media&token=3c60d2b7-17e0-4183-b83a-43446f0744a2';
+
+// const LOGO = 'https://thumbs.dreamstime.com/b/web-141700918.jpg';
+const LOGO = 'https://firebasestorage.googleapis.com/v0/b/rn-chat-f5ced.appspot.com/o/logo.png?alt=media';
+// const LOGO = 'https://firebasestorage.googleapis.com/v0/b/rn-chat-f5ced.appspot.com/o/logo.png?alt=media&token=3c60d2b7-17e0-4183-b83a-43446f0744a2';
 
 const Signin = ({ navigation }) => {
     const insets = useSafeAreaInsets();

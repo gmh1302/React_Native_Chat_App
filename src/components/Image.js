@@ -15,7 +15,7 @@ const ProfileImage = styled.Image`
 const Image = ({ url }) => {
     return (
         <Container>
-            <ProfileImage source={{ url: url }} />
+            <ProfileImage source={{ uri: url }} />
         </Container>
     );
 };
