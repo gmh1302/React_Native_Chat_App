@@ -11,8 +11,7 @@ const Label = styled.Text`
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 6px;
-    color: ${({ theme, isFocused }) =>
-        isFocused ? theme.text : theme.inputLabel};
+    color: ${({ theme, isFocused }) => isFocused ? theme.text : theme.inputLabel};
 `;
 const StyledInput = styled.TextInput.attrs(({ theme }) => ({
     placeholderTextColor: theme.inputPlaceholder,
@@ -32,14 +31,15 @@ const Input = forwardRef(
             label,
             value,
             onChangeText,
-            onSumbitEditing,
+            onSubmitEditing,
             onBlur,
             placeholder,
             returnKeyType,
             maxLength,
+            isPassword,
         },
         ref
-    ) => {
+) => {
         const [isFocused, setIsFocused] = useState(false);
 
         return (
@@ -49,7 +49,7 @@ const Input = forwardRef(
                     ref={ref}
                     value={value}
                     onChangeText={onChangeText}
-                    onSumbitEditing={onSumbitEditing}
+                    onSubmitEditing={onSubmitEditing}
                     onBlur={() => {
                         setIsFocused(false);
                         onBlur();
@@ -62,6 +62,7 @@ const Input = forwardRef(
                     textContentType="none"
                     isFocused={isFocused}
                     onFocus={() => setIsFocused(true)}
+                    secureTextEntry={isPassword}
                 />
             </Container>
         );
@@ -76,11 +77,12 @@ Input.propTypes = {
     label: PropTypes.string,
     value: PropTypes.string.isRequired,
     onChangeText: PropTypes.func,
-    onSumbitEditing: PropTypes.func,
+    onSubmitEditing: PropTypes.func,
     onBlur: PropTypes.func,
     placeholder: PropTypes.string,
     returnKeyType: PropTypes.oneOf(['done','next']),
     maxLength: PropTypes.number,
+    isPassword: PropTypes.bool,
 };
 
 export default Input;

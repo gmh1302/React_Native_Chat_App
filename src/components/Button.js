@@ -17,15 +17,15 @@ const Title = styled.Text`
     color: ${({ theme }) => theme.btnTitle};
 `;
 
-const Button = ({title, onPress, ContainerStyle, textStyle }) => {
+const Button = ({ title, onPress, containerStyle, textStyle }) => {
     return (
         <TouchableOpacity onPress={onPress} style={{ flexDirection: 'row' }}>
-            <Container style={ContainerStyle}>
+            <Container style={containerStyle}>
                 <Title style={textStyle}>{title}</Title>
             </Container>
         </TouchableOpacity>
-    )
-}
+    );
+};
 
 Button.PropTypes = {
     title: PropTypes.string.isRequired,
