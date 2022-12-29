@@ -1,0 +1,41 @@
+[33mcommit 6f8b5ec212a17078ddac0d1842fa93ae6fb6c115[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Minhyung Kim <alsgud940713@gmail.com>
+Date:   Thu Dec 29 22:14:58 2022 +0900
+
+    회원가입 화면 개발
+
+[33mcommit ff0603c083b9bccbf7134e9b089fdf49ac4fb47a[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Minhyung Kim <alsgud940713@gmail.com>
+Date:   Wed Dec 28 00:20:36 2022 +0900
+
+    로그인 화면 Input 컴포넌트 개발
+
+[33mcommit efe19e8c6fb5e911ae9a33b36d65cf61b6d10a53[m
+Author: Minhyung Kim <alsgud940713@gmail.com>
+Date:   Tue Dec 27 01:34:49 2022 +0900
+
+    이미지 첨부 코드 수정
+
+[33mcommit a8bdcc81fabc387b97c49e053784fe03e2f6de40[m
+Author: Minhyung Kim <alsgud940713@gmail.com>
+Date:   Tue Dec 27 01:25:17 2022 +0900
+
+    로그인 화면 생성
+
+[33mcommit d0582e8f20cd72976359674f793005d051541e82[m
+Author: Minhyung Kim <alsgud940713@gmail.com>
+Date:   Sun Dec 25 01:18:11 2022 +0900
+
+    인증 화면 개발
+
+[33mcommit 8cc6316c5db839d98bc66f18223b0add3dc77c09[m
+Author: Minhyung Kim <alsgud940713@gmail.com>
+Date:   Tue Dec 13 00:34:07 2022 +0900
+
+    first commit
+
+[33mcommit afaebf72ad06374a5d0199e7a0d52b83a36cbac4[m
+Author: gmh1302 <alsgud940713@gmail.com>
+Date:   Wed Dec 7 00:21:36 2022 +0900
+
+    Created a new Expo app

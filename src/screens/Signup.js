@@ -11,7 +11,10 @@ const Container = styled.View`
     padding: 50px 20px;
 `;
 
+const DEFAULT_PHOTO = 'https://firebasestorage.googleapis.com/v0/b/rn-chat-f5ced.appspot.com/o/face.png?alt=media';
+
 const Signup = () => {
+    const [photo, setPhoto] = useState(DEFAULT_PHOTO);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -28,7 +31,7 @@ const Signup = () => {
     return (
         <KeyboardAwareScrollView extraScrollHeight={20}>
             <Container>
-                <Image />
+                <Image showButton={true} url={photo} onChangePhoto={setPhoto} />
                 <Input
                     label="Name"
                     placeholder="Name"
