@@ -2,6 +2,8 @@ import React, { useState, useRef } from 'react';
 import styled from 'styled-components/native';
 import { Button, Image, Input } from '../components';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import { signup } from '../firebase';
+import { Alert } from 'react-native';
 
 const Container = styled.View`
     flex: 1;
@@ -13,7 +15,7 @@ const Container = styled.View`
 
 const DEFAULT_PHOTO = 'https://firebasestorage.googleapis.com/v0/b/rn-chat-f5ced.appspot.com/o/face.png?alt=media';
 
-const Signup = () => {
+const Signup = ({ navigation }) => {
     const [photo, setPhoto] = useState(DEFAULT_PHOTO);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -24,9 +26,17 @@ const Signup = () => {
     const refPassword = useRef(null);
     const refPasswordConfirm = useRef(null);
 
-    const _handleSignupBtnPress = () => {
-        console.log('signup');
-    }
+    const _handleSignupBtnPress = async () => {
+        try {
+            const user = await signup({ name, email, password, photo });
+            // alert("dddd!!!!");
+            navigation.navigate('Profile', { user });
+        } catch (e) {
+            // alert("bbb!!!");
+            Alert.alert('Signup Error', e.message);
+        }
+        // alert("ccc!!!");
+    };
 
     return (
         <KeyboardAwareScrollView extraScrollHeight={20}>
